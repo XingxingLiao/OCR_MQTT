@@ -10,7 +10,7 @@ on_off_results = []
 
 for i, coords in enumerate(crop_coordinates):
     region_id = i + 1
-    processed_path = f"/home/xingxin/processed_region_{region_id}.jpeg"
+    processed_path = f"/home/CITSEM/Ocr_Project/OCR_MQTT/Orignal_Image/processed_region_{region_id}.jpeg"
 
     if preprocess_image(image_path, coords, processed_path):
         response = send_to_ocr_api(processed_path)
